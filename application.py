@@ -10,7 +10,7 @@ def index():
     webpage = get_webpage()
     web_element = get_web_element(webpage)
     data = create_data(web_element)
-    return str(data)
+    return str(web_element)
 
 def get_webpage():    
     url = create_url('ArranN94')
@@ -32,5 +32,7 @@ def create_data(web_element):
         'image_src': web_element.get('src')
     }
     return user_data
+    
+
 
     
