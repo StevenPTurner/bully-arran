@@ -3,4 +3,6 @@
  - set FLASK_APP=hello.py
  - export FLASK_APP=hello.py
  - flask run
+ - pip install beautifulsoup4
+
   - http://flask.pocoo.org/docs/1.0/deploying/#deployment
