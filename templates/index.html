@@ -2,14 +2,18 @@
 <html>
     <head>
         <title>Is Arran Good At Rainbow Six Yet?</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <!-- <meta name="format-detection" content="telephone=no"> -->
     </head>
     <body>
         <main>
-            <h1>{{ data['good_yet'] }}</h1>
-            <p> {{data['username']}} is a {{ data['rank_name'] }} {{ data['rank_level'] }} </p>
-            <img src="{{ data['image_src'] }}">
+            <h1 class="title default-text">{{ data['good_yet'] }}</h1>
+            <div class=subtitle>
+                <p class="subtitle-message default-text"> {{data['username']}} is a {{ data['rank_name'] }} {{ data['rank_level'] }} </p>
+                <img class="subtitle-image" src="{{ data['image_src'] }}">
+            </div>
         </main>
     </body>
 </html>
