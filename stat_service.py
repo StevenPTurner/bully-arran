@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
-default_platform = '    xbox'
+default_platform = 'xbox'
 default_user = 'ArranN94'
 default_threshhold = 2
 request_header = {'User-Agent': 'Mozilla/5.0'} 
