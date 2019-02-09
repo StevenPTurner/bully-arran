@@ -6,8 +6,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    data = stat_service.get_data()
+    data = stat_service.get_home_data()
     return render_template('index.html', data=data)
+
+@app.route('/stats')
+def stats():
+    return render_template('stats.html')
 
    
 

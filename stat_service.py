@@ -60,9 +60,19 @@ def is_good(rank_name, threshhold):
     else:
         return False
 
-def get_data(platform=default_platform, user=default_user):
+def season_elements(web_page):
+    soup = BeautifulSoup(web_page, 'html.parser')
+    return soup.select('.r6-quickseason')
+
+
+
+def get_home_data(platform=default_platform, user=default_user):
     url = create_url(platform, user)
     web_page = get_webpage(url, request_header)
     rank_element = get_rank_from_page(web_page)
     data = create_data(rank_element, user)
     return data
+
+def get_stats_data(platform=default_platform, user=default_user):
+    url = create_url(platform, user)
+    web_page = get_webpage(url, request_header)
