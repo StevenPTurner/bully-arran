@@ -11,9 +11,8 @@ def index():
 
 @app.route('/stats')
 def stats():
-    return render_template('stats.html')
-
-   
+    data = stat_service.get_best_season_data()
+    return render_template('stats.html', data=data)
 
 
     
